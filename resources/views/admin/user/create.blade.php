@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title','User list')
+@section('title', 'User list')
 
 @section('content')
     <div class="app-main__inner">
@@ -26,7 +26,8 @@
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
                                         <label for="name">Name</label>
-                                        <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" required="">
+                                        <input type="text" name="name" id="name"
+                                            class="form-control @error('name') is-invalid @enderror" required="">
                                         @error('name')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
@@ -36,7 +37,8 @@
                                 <div class="col-md-3">
                                     <div class="position-relative form-group">
                                         <label for="email">Username / Email</label>
-                                        <input type="text" name="email" id="email" class="form-control @error('email') is-invalid @enderror" required>
+                                        <input type="text" name="email" id="email"
+                                            class="form-control @error('email') is-invalid @enderror" required>
 
                                         @error('email')
                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -63,8 +65,9 @@
                                         </button>
 
                                         <a href="{{ route('user.index') }}">
-                                            <button type="button" name="cancel" class="btn btn-sm btn-danger" id="cancel_btn">
-                                            <i class="fa fa-times"></i> Cancel</button>
+                                            <button type="button" name="cancel" class="btn btn-sm btn-danger"
+                                                id="cancel_btn">
+                                                <i class="fa fa-times"></i> Cancel</button>
                                         </a>
                                     </div>
                                 </div>
@@ -75,7 +78,7 @@
                                 <div class="col-md-12">
 
                                     <h4 class="h4">Permission</h4>
-                                    <hr/>
+                                    <hr />
 
                                     <table style="border-collapse: collapse" class="table table-borderless p-4">
 
@@ -84,7 +87,8 @@
                                             <td scope="col"></td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="dashboard_view" id="dashboard_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="dashboard_view"
+                                                    id="dashboard_view" style="margin-left: 28%;" />
 
                                                 <label for="dashboard_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -93,630 +97,100 @@
 
 
                                         {{-- account --}}
-                                            <tr>
-                                                <td scope="col">Accounts</td>
-                                            </tr>
+                                        <tr>
+                                            <td scope="col">Accounts</td>
+                                        </tr>
 
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td> List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="account_view" id="account_view" style="margin-left: 28%;" />
+                                        <tr>
+                                            <td scope="col"></td>
+                                            <td> List</td>
+                                            <td scope="col"></td>
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="account_view"
+                                                    id="account_view" style="margin-left: 28%;" />
 
-                                                    <label for="account_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="account_edit" id="account_edit" style="margin-left: 28%;" />
+                                                <label for="account_view">View</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="account_edit"
+                                                    id="account_edit" style="margin-left: 28%;" />
 
-                                                    <label for="account_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="account_delete" id="account_delete" style="margin-left: 28%;" />
+                                                <label for="account_edit">Edit</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="account_delete"
+                                                    id="account_delete" style="margin-left: 28%;" />
 
-                                                    <label for="account_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
+                                                <label for="account_delete">Delete</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Balance</td>
-                                                <td scope="col"></td>
-
-
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="account_balance" id="account_balance" style="margin-left: 28%;" />
-
-                                                    <label for="account_balance">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Ledger</td>
-                                                <td scope="col"></td>
+                                        <tr>
+                                            <td scope="col"></td>
+                                            <td>Balance</td>
+                                            <td scope="col"></td>
 
 
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="account_ledger" id="account_ledger" style="margin-left: 28%;" />
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="account_balance"
+                                                    id="account_balance" style="margin-left: 28%;" />
 
-                                                    <label for="account_ledger">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
+                                                <label for="account_balance">View</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="col"></td>
+                                            <td>Ledger</td>
+                                            <td scope="col"></td>
+
+
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="account_ledger"
+                                                    id="account_ledger" style="margin-left: 28%;" />
+
+                                                <label for="account_ledger">View</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                        </tr>
                                         {{-- account --}}
 
-                                        {{-- fund_transfer --}}
-                                            <tr>
-                                                <td scope="col">Fund Trasnfer</td>
-                                            </tr>
 
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_transfer_list_view" id="fund_transfer_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_transfer_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_transfer_edit" id="fund_transfer_edit" style="margin-left: 28%;" />
-
-                                                    <label for="fund_transfer_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_transfer_delete" id="fund_transfer_delete" style="margin-left: 28%;" />
-
-                                                    <label for="fund_transfer_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-
-
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_transfer_report_view" id="fund_transfer_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_transfer_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-                                        {{-- fund_transfer --}}
-
-                                        {{-- expense --}}
-                                            <tr>
-                                                <td scope="col">Expenses</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_list_view" id="expense_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="expense_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_edit" id="expense_edit" style="margin-left: 28%;" />
-
-                                                    <label for="expense_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_delete" id="expense_delete" style="margin-left: 28%;" />
-
-                                                    <label for="expense_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_report_view" id="expense_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="expense_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Expense Category</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_category_list_view" id="expense_category_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="expense_category_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_category_edit" id="expense_category_edit" style="margin-left: 28%;" />
-
-                                                    <label for="expense_category_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="expense_category_delete" id="expense_category_delete" style="margin-left: 28%;" />
-
-                                                    <label for="expense_category_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-                                        {{-- expense --}}
-
-                                        {{-- Capital Account--}}
-                                            <tr>
-                                                <td scope="col">Capital Account</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="capital_account_list_view" id="capital_account_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="capital_account_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="capital_account_edit" id="capital_account_edit" style="margin-left: 28%;" />
-
-                                                    <label for="capital_account_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="capital_account_delete" id="capital_account_delete" style="margin-left: 28%;" />
-
-                                                    <label for="capital_account_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Ledger</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="capital_account_ledger_view" id="capital_account_ledger_view" style="margin-left: 28%;" />
-
-                                                    <label for="capital_account_ledger_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{-- capital account --}}
-
-                                        {{-- fund add --}}
-                                            <tr>
-                                                <td scope="col">Fund add </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_add_list_view" id="fund_add_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_add_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_add_edit" id="fund_add_edit" style="margin-left: 28%;" />
-
-                                                    <label for="fund_add_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_add_delete" id="fund_add_delete" style="margin-left: 28%;" />
-
-                                                    <label for="fund_add_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_add_report_view" id="fund_add_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_add_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{-- fund add --}}
-
-                                         {{-- Fund return--}}
-                                            <tr>
-                                                <td scope="col">Fund return</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_return_list_view" id="fund_return_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_return_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_return_edit" id="fund_return_edit" style="margin-left: 28%;" />
-
-                                                    <label for="fund_return_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_return_delete" id="fund_return_delete" style="margin-left: 28%;" />
-
-                                                    <label for="fund_return_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="fund_return_report_view" id="fund_return_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="fund_return_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{-- capital account --}}
-
-
-                                         {{-- Employee --}}
-                                            <tr>
-                                                <td scope="col">Employee </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_list_view" id="employee_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="employee_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_edit" id="employee_edit" style="margin-left: 28%;" />
-
-                                                    <label for="employee_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_delete" id="employee_delete" style="margin-left: 28%;" />
-
-                                                    <label for="employee_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Payment</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_payment_list_view" id="employee_payment_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="employee_payment_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_payment_edit" id="employee_payment_edit" style="margin-left: 28%;" />
-
-                                                    <label for="employee_payment_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_payment_delete" id="employee_payment_delete" style="margin-left: 28%;" />
-
-                                                    <label for="employee_payment_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_payment_report" id="employee_payment_report" style="margin-left: 28%;" />
-
-                                                    <label for="employee_payment_report">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Ledger</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_ledger_view" id="employee_ledger_view" style="margin-left: 28%;" />
-
-                                                    <label for="employee_ledger_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{--amployee --}}
-
-
-                                         {{-- Employee monthly salary --}}
-                                            <tr>
-                                                <td scope="col">Employee monthly salary </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Generate</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_monthly_generate_view" id="employee_monthly_generate_view" style="margin-left: 28%;" />
-
-                                                    <label for="employee_monthly_generate_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_monthly_list" id="employee_monthly_list" style="margin-left: 28%;" />
-
-                                                    <label for="employee_monthly_list">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_monthly_delete" id="employee_monthly_delete" style="margin-left: 28%;" />
-
-                                                    <label for="employee_monthly_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-                                        {{-- monthly salary  --}}
-
-                                        {{-- Employee daily salary --}}
-                                            <tr>
-                                                <td scope="col">Employee daily salary </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_daily_list" id="employee_daily_list" style="margin-left: 28%;" />
-
-                                                    <label for="employee_daily_list">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_daily_edit" id="employee_daily_edit" style="margin-left: 28%;" />
-
-                                                    <label for="employee_daily_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_daily_delete" id="employee_daily_delete" style="margin-left: 28%;" />
-
-                                                    <label for="employee_daily_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="employee_daily_report_view" id="employee_daily_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="employee_daily_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{-- daily salary --}}
-
-
-                                        {{-- Party --}}
-                                            <tr>
-                                                <td scope="col">Party </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_list" id="party_list" style="margin-left: 28%;" />
-
-                                                    <label for="party_list">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_edit" id="party_edit" style="margin-left: 28%;" />
-
-                                                    <label for="party_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_delete" id="party_delete" style="margin-left: 28%;" />
-
-                                                    <label for="party_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Payment</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_payment_list" id="party_payment_list" style="margin-left: 28%;" />
-
-                                                    <label for="party_payment_list">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_payment_edit" id="party_payment_edit" style="margin-left: 28%;" />
-
-                                                    <label for="party_payment_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_payment_delete" id="party_payment_delete" style="margin-left: 28%;" />
-
-                                                    <label for="party_payment_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            {{-- <tr>
-                                                <td scope="col"></td>
-                                                <td>Ledger</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_ledger_view" id="party_ledger_view" style="margin-left: 28%;" />
-
-                                                    <label for="party_ledger_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr> --}}
-                                         {{-- Party --}}
-
-                                        {{-- Party purchase --}}
-                                            <tr>
-                                                <td scope="col">Party purchase </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>New purchase</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_purchase_new_view" id="party_purchase_new_view" style="margin-left: 28%;" />
-
-                                                    <label for="party_purchase_new_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>List</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_purchase_list_view" id="party_purchase_list_view" style="margin-left: 28%;" />
-
-                                                    <label for="party_purchase_list_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_purchase_edit" id="party_purchase_edit" style="margin-left: 28%;" />
-
-                                                    <label for="party_purchase_edit">Edit</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_purchase_delete" id="party_purchase_delete" style="margin-left: 28%;" />
-
-                                                    <label for="party_purchase_delete">Delete</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td scope="col"></td>
-                                                <td>Report</td>
-                                                <td scope="col"></td>
-                                                <td scope="col">
-                                                    <input type="checkbox" name="permission[]" value="party_purchase_report_view" id="party_purchase_report_view" style="margin-left: 28%;" />
-
-                                                    <label for="party_purchase_report_view">View</label>
-                                                    &nbsp;&nbsp;&nbsp;
-                                                </td>
-
-
-                                            </tr>
-                                        {{-- Party --}}
-
-
-                                    {{-- Rent --}}
+                                        {{-- Rent --}}
                                         <tr>
                                             <td scope="col">Rent </td>
                                             <td scope="col"> </td>
                                             <td scope="col"> </td>
 
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="rent_view" id="rent_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="rent_view"
+                                                    id="rent_view" style="margin-left: 28%;" />
 
                                                 <label for="rent_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="rent_edit" id="rent_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="rent_edit"
+                                                    id="rent_edit" style="margin-left: 28%;" />
 
                                                 <label for="rent_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="rent_delete" id="rent_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="rent_delete"
+                                                    id="rent_delete" style="margin-left: 28%;" />
 
                                                 <label for="rent_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                         </tr>
 
-                                    {{-- Rent --}}
+                                        {{-- Rent --}}
 
-                                    {{-- Bill --}}
+                                        {{-- Bill --}}
                                         <tr>
                                             <td scope="col">Bill </td>
                                         </tr>
@@ -726,7 +200,8 @@
                                             <td>Generate</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="party_report_view" id="party_report_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="party_report_view"
+                                                    id="party_report_view" style="margin-left: 28%;" />
 
                                                 <label for="party_report_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -740,19 +215,22 @@
                                             <td>List</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_view" id="bill_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_view"
+                                                    id="bill_view" style="margin-left: 28%;" />
 
                                                 <label for="bill_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_print" id="bill_print" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_print"
+                                                    id="bill_print" style="margin-left: 28%;" />
 
                                                 <label for="bill_print">Print</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_delete" id="bill_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_delete"
+                                                    id="bill_delete" style="margin-left: 28%;" />
 
                                                 <label for="bill_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -764,7 +242,8 @@
                                             <td>Print</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_print" id="bill_print" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_print"
+                                                    id="bill_print" style="margin-left: 28%;" />
 
                                                 <label for="bill_print">View</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -778,19 +257,23 @@
                                             <td>Category</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_category_list_view" id="bill_category_list_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]"
+                                                    value="bill_category_list_view" id="bill_category_list_view"
+                                                    style="margin-left: 28%;" />
 
                                                 <label for="bill_category_list_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_category_edit" id="bill_category_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_category_edit"
+                                                    id="bill_category_edit" style="margin-left: 28%;" />
 
                                                 <label for="bill_category_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_category_delete" id="bill_category_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_category_delete"
+                                                    id="bill_category_delete" style="margin-left: 28%;" />
 
                                                 <label for="bill_category_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -802,19 +285,22 @@
                                             <td>Payment</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_payment_list_view" id="bill_payment_list_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_payment_list_view"
+                                                    id="bill_payment_list_view" style="margin-left: 28%;" />
 
                                                 <label for="bill_payment_list_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_payment_edit" id="bill_payment_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_payment_edit"
+                                                    id="bill_payment_edit" style="margin-left: 28%;" />
 
                                                 <label for="bill_payment_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_payment_delete" id="bill_payment_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_payment_delete"
+                                                    id="bill_payment_delete" style="margin-left: 28%;" />
 
                                                 <label for="bill_payment_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -826,7 +312,8 @@
                                             <td>Ledger</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="bill_ledger_view" id="bill_ledger_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="bill_ledger_view"
+                                                    id="bill_ledger_view" style="margin-left: 28%;" />
 
                                                 <label for="bill_ledger_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -834,91 +321,100 @@
 
 
                                         </tr>
-                                    {{-- bill --}}
+                                        {{-- bill --}}
 
-                                    {{-- house --}}
+                                        {{-- house --}}
                                         <tr>
                                             <td scope="col">House </td>
                                             <td scope="col"> </td>
                                             <td scope="col"> </td>
 
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="house_view" id="house_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="house_view"
+                                                    id="house_view" style="margin-left: 28%;" />
 
                                                 <label for="house_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="house_edit" id="house_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="house_edit"
+                                                    id="house_edit" style="margin-left: 28%;" />
 
                                                 <label for="house_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="house_delete" id="house_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="house_delete"
+                                                    id="house_delete" style="margin-left: 28%;" />
 
                                                 <label for="house_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                         </tr>
-                                    {{-- house --}}
+                                        {{-- house --}}
 
-                                    {{-- floor --}}
+                                        {{-- floor --}}
                                         <tr>
                                             <td scope="col">Floor </td>
                                             <td scope="col"> </td>
                                             <td scope="col"> </td>
 
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="floor_view" id="floor_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="floor_view"
+                                                    id="floor_view" style="margin-left: 28%;" />
 
                                                 <label for="floor_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="floor_edit" id="floor_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="floor_edit"
+                                                    id="floor_edit" style="margin-left: 28%;" />
 
                                                 <label for="floor_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="floor_delete" id="floor_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="floor_delete"
+                                                    id="floor_delete" style="margin-left: 28%;" />
 
                                                 <label for="floor_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                         </tr>
-                                    {{-- floor --}}
+                                        {{-- floor --}}
 
-                                    {{-- flat --}}
-                                    <tr>
-                                        <td scope="col">Flats </td>
-                                        <td scope="col"> </td>
-                                        <td scope="col"> </td>
+                                        {{-- flat --}}
+                                        <tr>
+                                            <td scope="col">Flats </td>
+                                            <td scope="col"> </td>
+                                            <td scope="col"> </td>
 
-                                        <td scope="col">
-                                            <input type="checkbox" name="permission[]" value="flat_view" id="flat_view" style="margin-left: 28%;" />
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="flat_view"
+                                                    id="flat_view" style="margin-left: 28%;" />
 
-                                            <label for="flat_view">View</label>
-                                            &nbsp;&nbsp;&nbsp;
-                                        </td>
-                                        <td scope="col">
-                                            <input type="checkbox" name="permission[]" value="flat_edit" id="flat_edit" style="margin-left: 28%;" />
+                                                <label for="flat_view">View</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="flat_edit"
+                                                    id="flat_edit" style="margin-left: 28%;" />
 
-                                            <label for="flat_edit">Edit</label>
-                                            &nbsp;&nbsp;&nbsp;
-                                        </td>
-                                        <td scope="col">
-                                            <input type="checkbox" name="permission[]" value="flat_delete" id="flat_delete" style="margin-left: 28%;" />
+                                                <label for="flat_edit">Edit</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                            <td scope="col">
+                                                <input type="checkbox" name="permission[]" value="flat_delete"
+                                                    id="flat_delete" style="margin-left: 28%;" />
 
-                                            <label for="flat_delete">Delete</label>
-                                            &nbsp;&nbsp;&nbsp;
-                                        </td>
-                                    </tr>
-                                    {{-- flat --}}
+                                                <label for="flat_delete">Delete</label>
+                                                &nbsp;&nbsp;&nbsp;
+                                            </td>
+                                        </tr>
+                                        {{-- flat --}}
 
 
-                                    {{-- User --}}
+                                        {{-- User --}}
                                         <tr>
                                             <td scope="col">User </td>
                                         </tr>
@@ -928,7 +424,8 @@
                                             <td>New</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="user_view" id="user_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="user_view"
+                                                    id="user_view" style="margin-left: 28%;" />
 
                                                 <label for="user_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
@@ -942,31 +439,34 @@
                                             <td>List</td>
                                             <td scope="col"></td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="user_view" id="user_view" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="user_view"
+                                                    id="user_view" style="margin-left: 28%;" />
 
                                                 <label for="user_view">View</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="user_edit" id="user_edit" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="user_edit"
+                                                    id="user_edit" style="margin-left: 28%;" />
 
                                                 <label for="user_edit">Edit</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                             <td scope="col">
-                                                <input type="checkbox" name="permission[]" value="user_delete" id="user_delete" style="margin-left: 28%;" />
+                                                <input type="checkbox" name="permission[]" value="user_delete"
+                                                    id="user_delete" style="margin-left: 28%;" />
 
                                                 <label for="user_delete">Delete</label>
                                                 &nbsp;&nbsp;&nbsp;
                                             </td>
                                         </tr>
 
-                                    {{--User --}}
+                                        {{-- User --}}
 
 
-                                </table>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
 
 
 
@@ -980,7 +480,3 @@
         </div>
     </div>
 @endsection
-
-
-
-

@@ -81,7 +81,7 @@ class HouseController extends Controller
                     'address' => $request->address,
                     "start_date" => date("Y-m-d", strtotime($request->start_date)),
                     'business_electric_bill' => $request->business_electric_bill,
-                    'domestric_electric_bill' => $request->domestric_electric_bill,
+                    'domestic_electric_bill' => $request->domestic_electric_bill,
 
                 ]);
             }
@@ -136,7 +136,7 @@ class HouseController extends Controller
                     'address' => $request->address,
                     "start_date" => date("Y-m-d", strtotime($request->start_date)),
                     'business_electric_bill' => $request->business_electric_bill,
-                    'domestric_electric_bill' => $request->domestric_electric_bill,
+                    'domestic_electric_bill' => $request->domestic_electric_bill,
 
                 ]);
             }

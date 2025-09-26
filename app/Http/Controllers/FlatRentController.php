@@ -154,7 +154,7 @@ class FlatRentController extends Controller
                 "year_id"   => $rent_date->year,
                 "month_id" => $rent_date->month,
                 "previous_meter_reading" => $request->meter_reading,
-                "rate" => $flatInfo->type == "shop" ? $houseInfo->business_electric_bill : $houseInfo->domestric_electric_bill
+                "rate" => $flatInfo->type == "shop" ? $houseInfo->business_electric_bill : $houseInfo->domestic_electric_bill
             ]);
 
 
@@ -328,7 +328,7 @@ class FlatRentController extends Controller
                 "month_id" => $rent_date->month,
             ], [
                 "previous_meter_reading" => $request->meter_reading,
-                "rate" => $flatInfo->type == "shop" ? $houseInfo->business_electric_bill : $houseInfo->domestric_electric_bill
+                "rate" => $flatInfo->type == "shop" ? $houseInfo->business_electric_bill : $houseInfo->domestic_electric_bill
             ]);
             // dd($elct);
 

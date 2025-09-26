@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('houses', function (Blueprint $table) {
             $table->decimal('business_electric_bill',10,2)->nullable()->after('description');
-            $table->decimal('domestric_electric_bill',10,2)->nullable()->after('business_electric_bill');
+            $table->decimal('domestic_electric_bill',10,2)->nullable()->after('business_electric_bill');
 
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration
     {
         Schema::table('houses', function (Blueprint $table) {
             $table->dropColumn('business_electric_bill');
-            $table->dropColumn('domestric_electric_bill');
+            $table->dropColumn('domestic_electric_bill');
         });
     }
 };

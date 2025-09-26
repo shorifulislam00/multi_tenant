@@ -12,15 +12,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
         $this->call(UserSeeder::class);
         $this->call(BillConfigsSeeder::class);
         $this->call(PermissionSeeder::class);
         $this->call(ModelHasPermissionSeeder::class);
+        $this->call(AccountsSeeder::class);
+        $this->call(AccountLedgerSeeder::class);
+        $this->call(HouseSeeder::class);
+        $this->call(FloorSeeder::class);
+        $this->call(FlatSeeder::class);
+        $this->call(FlatRentSeeder::class);
+        $this->call(RentBillConfigsSeeder::class);
+        $this->call(TenantLedgerSeeder::class);
+        $this->call(ElectricMeterReadingSeeder::class);
+        $this->call(BillsSeeder::class);
+        $this->call(FlatRentDetailSeeder::class);
     }
 }

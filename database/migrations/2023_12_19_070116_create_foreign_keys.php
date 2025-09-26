@@ -35,22 +35,6 @@ class CreateForeignKeys extends Migration {
 						->onUpdate('cascade');
 		});
 
-		Schema::table('rent_bill_configs', function(Blueprint $table) {
-			$table->foreign('flat_rent_id')->references('id')->on('flat_rents')
-						->onDelete('cascade')
-						->onUpdate('cascade');
-		});
-		Schema::table('rent_bill_configs', function(Blueprint $table) {
-			$table->foreign('bill_config_id')->references('id')->on('bill_configs')
-						->onDelete('cascade')
-						->onUpdate('cascade');
-		});
-
-		Schema::table('flat_rent_bills', function(Blueprint $table) {
-			$table->foreign('rent_bill_config_id')->references('id')->on('rent_bill_configs')
-						->onDelete('cascade')
-						->onUpdate('cascade');
-		});
 
 	}
 
@@ -66,15 +50,7 @@ class CreateForeignKeys extends Migration {
 		Schema::table('flat_rents', function(Blueprint $table) {
 			$table->dropForeign('flat_rents_flat_id_foreign');
 		});
-		Schema::table('rent_bill_configs', function(Blueprint $table) {
-			$table->dropForeign('rent_bill_configs_flat_rent_id_foreign');
-		});
-		Schema::table('rent_bill_configs', function(Blueprint $table) {
-			$table->dropForeign('rent_bill_configs_bill_config_id_foreign');
-		});
-		Schema::table('flat_rent_bills', function(Blueprint $table) {
-			$table->dropForeign('flat_rent_bills_rent_bill_config_id_foreign');
-		});
+		
 
 	}
 }

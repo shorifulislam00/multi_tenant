@@ -82,7 +82,7 @@
                                                     @if($item->flat->type == 'shop')
                                                     {{ $rate = $house->business_electric_bill }}
                                                     @elseif($item->flat->type == 'apartment')
-                                                    {{ $rate = $house->domestric_electric_bill }}
+                                                    {{ $rate = $house->domestic_electric_bill }}
                                                     @endif
 
                                                     <input type="hidden" name="rate[]" id="rate{{$key}}" value="{{$rate}}" />

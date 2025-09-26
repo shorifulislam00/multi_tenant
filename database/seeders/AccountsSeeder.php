@@ -14,7 +14,8 @@ class AccountsSeeder extends Seeder
     {
 
         \App\Models\Account::insert([
-            ['name' => 'Cash', 'acc_number' => '001', 'branch_name' => 'Cash', 'opening_balance' => 100, 'balance' => 100],
+            ['name' => 'Cash', 'acc_number' => '001', 'branch_name' => 'Cash', 'opening_balance' => 100, 'balance' => 100, 'created_by' => 1],
+            ['name' => 'Brac', 'acc_number' => '432145678', 'branch_name' => 'Gulshan, Dhaka', 'opening_balance' => 100, 'balance' => 100, 'created_by' => 1],
         ]);
 
     }

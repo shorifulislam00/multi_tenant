@@ -17,7 +17,7 @@ class House extends Model
         'address',
         'start_date',
         'business_electric_bill',
-        'domestric_electric_bill',
+        'domestic_electric_bill',
     ];
     public $timestamps = true;
 

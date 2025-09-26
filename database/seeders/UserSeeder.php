@@ -15,7 +15,8 @@ class UserSeeder extends Seeder
         \App\Models\User::create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
-            'password' => Hash::make('12345678')
+            'password' => Hash::make('12345678'),
+            'email_verified_at'=> date('Y-m-d H:i:s'),
         ]);
 
 

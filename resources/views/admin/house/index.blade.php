@@ -69,7 +69,7 @@
 
                             <div class="form-group">
                                 <label for="domestic_electric_bill" class="control-label">Domestic electric rate</label>
-                                <input type="text" class="form-control" id="domestic_electric_bill" name="domestric_electric_bill" placeholder="Enter rate" value="" >
+                                <input type="text" class="form-control" id="domestic_electric_bill" name="domestic_electric_bill" placeholder="Enter rate" value="" >
                             </div>
 
                             <div class="form-group">
@@ -217,7 +217,7 @@
                     $('#address').val(data.address);
                     $('#start_date').val(data.start_date);
                     $('#business_electric_bill').val(data.business_electric_bill);
-                    $('#domestric_electric_bill').val(data.domestric_electric_bill);
+                    $('#domestic_electric_bill').val(data.domestic_electric_bill);
 
                     $('#savedata').hide(); // Show Save button
                     $('#updatedata').show(); // Hide Update button
